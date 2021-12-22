@@ -1,0 +1,19 @@
+.box{
+    max-width: 40vw;
+    margin: 10px auto 10px auto;
+    border: 1px solid rgb(224, 219, 219);
+    border-radius: 20%;  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+	transition:.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+img:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
