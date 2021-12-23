@@ -18,7 +18,7 @@ function NavBar({ openNav }) {
           </button>
           <button type="button">&#9734; Favourites</button>
           <button type="button">&#x260F; Contact</button>
-          <button type="button" onClick={openNav}>
+          <button id="navBtn" type="button" onClick={openNav}>
             ☰ Open Sidebar
           </button>
         </ul>

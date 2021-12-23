@@ -1,0 +1,49 @@
+footer{
+    color: honeydew;
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    bottom: -10px;
+    background-color: #2a2d33;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+footer{
+    div{
+        a{
+            svg{
+                font-size: 1.5em !important;
+                color: honeydew;
+            }
+        }
+    }
+}
+
+footer{
+    div{
+        a{
+            svg:hover{
+                color: rgb(58, 77, 58);
+                transition: 0.5s;
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+footer{
+    flex-direction: column;
+    height: 10vh;
+}
+}
+
+@media screen and (max-width:600px) {
+footer{
+     height: 15vh;
+}
+}

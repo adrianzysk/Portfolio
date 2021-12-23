@@ -28,5 +28,7 @@ input{
 
 #main {
   transition: margin-right .5s; /* If you want a transition effect */
+  min-height: 100vh;
+  position: relative;
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./MoviesList.scss";
 import MovieBox from "../components/MovieBox";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 function MoviesList() {
   const [movies, setMovies] = useState([]);
@@ -50,6 +51,7 @@ function MoviesList() {
               />
             </div>
           ))}
+        <Footer />
       </div>
     </div>
   );
