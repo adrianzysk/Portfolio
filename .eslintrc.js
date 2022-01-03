@@ -19,7 +19,12 @@ module.exports = {
   rules: {
     "no-unused-vars": "warn",
     "no-use-before-define": ["error", { functions: false, classes: false }],
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
     "arrow-parens": ["warn", "as-needed"],
     "react/function-component-definition": [
       2,

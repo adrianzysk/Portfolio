@@ -31,13 +31,27 @@ function MoviesList() {
         <button type="button" className="closebtn" onClick={closeNav}>
           &times;
         </button>
+        <div className="side">
+          <button type="button">About</button>
+          <button type="button">Search</button>
+          <button type="button">Favourites</button>
+          <button type="button">Contact</button>
+        </div>
       </div>
       <div id="main" className="App">
         <NavBar openNav={openNav} />
+        <div className="SearchDescription">
+          <div>
+            <p>
+              <b>SEARCH FILM OR GAME AND ADD TO FAVOURITES</b>
+            </p>
+          </div>
+        </div>
         <input
           type="text"
           placeholder="Enter movie name"
           onChange={handleChange}
+          spellCheck="false"
         />
         {!!movies.Search?.length &&
           movies.Search.map((movie) => (

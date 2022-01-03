@@ -5,7 +5,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 
 function NavBar({ openNav }) {
   return (
-    <header className="App-header">
+    <header className="Nav-header">
       <nav id="nav">
         <ul className="flex-box">
           <button type="button">
