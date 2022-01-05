@@ -1,12 +1,12 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { add } from "../redux/reducer";
+import { remove } from "../redux/reducer";
 import "./MovieBox.scss";
 
-function MovieBox({ title, poster, type, year, imdbID }) {
+function FavouriteBox({ title, poster, type, year, imdbID }) {
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(add({ title, poster, type, year, imdbID }));
+    dispatch(remove(imdbID));
   };
   return (
     <div className="box">
@@ -20,10 +20,10 @@ function MovieBox({ title, poster, type, year, imdbID }) {
         aria-label="Add to Favourites"
         onClick={handleClick}
       >
-        <h2>ADD TO FAVOURITES</h2>
+        <h2>REMOVE FROM FAVOURITES</h2>
       </button>
     </div>
   );
 }
 
-export default MovieBox;
+export default FavouriteBox;

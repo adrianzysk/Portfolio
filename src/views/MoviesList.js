@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./MoviesList.scss";
 import MovieBox from "../components/MovieBox";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 
 function MoviesList() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState({});
   const [search, setSearch] = useState("");
   const handleChange = (event) => {
     setSearch(event.target.value);
@@ -15,31 +13,9 @@ function MoviesList() {
       (response) => response.json().then((data) => setMovies(data))
     );
   }, [search]);
-  const openNav = () => {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginRight = "250px";
-    document.getElementById("nav").style.marginRight = "250px";
-  };
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.marginRight = "0";
-    document.getElementById("nav").style.marginRight = "0";
-  }
   return (
     <div>
-      <div id="mySidebar" className="sidebar">
-        <button type="button" className="closebtn" onClick={closeNav}>
-          &times;
-        </button>
-        <div className="side">
-          <button type="button">About</button>
-          <button type="button">Search</button>
-          <button type="button">Favourites</button>
-          <button type="button">Contact</button>
-        </div>
-      </div>
-      <div id="main" className="App">
-        <NavBar openNav={openNav} />
+      <div className="App">
         <div className="SearchDescription">
           <div>
             <p>
@@ -49,7 +25,7 @@ function MoviesList() {
         </div>
         <input
           type="text"
-          placeholder="Enter movie name"
+          placeholder="ENTER TITLE"
           onChange={handleChange}
           spellCheck="false"
         />
@@ -65,7 +41,6 @@ function MoviesList() {
               />
             </div>
           ))}
-        <Footer />
       </div>
     </div>
   );

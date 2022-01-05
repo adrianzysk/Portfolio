@@ -1,0 +1,47 @@
+#main {
+    transition: margin-right .5s; 
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+#mySidebar{
+    button{
+        background-color: transparent;
+        color: honeydew;
+        border: none;
+        font-size: 1.6em;
+        padding: 30px;
+    }
+    button:hover{
+        color: rgb(146, 150, 146);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+
+.sidebar{
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+}
+
+.closebtn{
+    position: absolute;
+    font-size: 3.5rem !important;
+    top: 20px;
+    right: 2px;
+}
+
+.side{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

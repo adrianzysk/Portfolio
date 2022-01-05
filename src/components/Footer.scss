@@ -39,11 +39,17 @@ footer{
         flex-direction: column;
         height: 12vh;
     }
+    .footerBox{
+        padding-top: 13vh;
+    }
 }
 
 @media screen and (max-width:600px),
        screen and (max-height:800px) {
     footer{
         height: 15vh;
+    }
+    .footerBox{
+        padding-top: 16vh;
     }
 }

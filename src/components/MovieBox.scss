@@ -1,9 +1,11 @@
 .box{
-    max-width: 40vw;
+    min-width: 300px;
+    width: 30vw;
     margin: 10px auto 10px auto;
     border: 1px solid rgb(224, 219, 219);
-    border-radius: 5%;  
+    border-radius: 3%;  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:whitesmoke;
 }
 
 img{
@@ -13,8 +15,39 @@ img{
 	transition:.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+.favouriteBox{
+    margin-left: 30%;
+    margin-right: 30%;
+    border: transparent;
+    border-radius: 35%;
+    
+}
+
+.favouriteBox:hover{
+    transition: .5s;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
 img:hover{
     transform: scale(1.01);
     cursor: pointer;
 }
 
+@media screen and (max-width:1200px) {
+    .box{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .box{
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .box{
+        width: 80vw;
+    }
+}

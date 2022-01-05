@@ -14,11 +14,16 @@
     z-index: 1;
   }
 
+.Nav-box{
+    padding-bottom: 14vh;
+}
+
 .flex-box {
     display: flex;
     flex-direction: row;
 }
-ul{
+
+.flex-box{
     button {
         margin-right: 20px;
         padding: 20px;
@@ -57,11 +62,15 @@ ul{
     .Nav-header{
         align-items: center;
         justify-content: flex-start;
-        height: 20vh;
+        height: 22vh;
+    }
+    .Nav-box{
+        padding-bottom: 23vh;
     }
     ul{
+        margin-top: 0;
         button{
-            padding: 0;
+            padding: 4px;
         }
     }
 }
