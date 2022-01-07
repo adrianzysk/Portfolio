@@ -3,9 +3,9 @@
     background-color: #2a2d33;
     height: 13vh;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
     font-size: calc(10px + 1.5vmin);
     color: white;
     position: fixed;
@@ -43,6 +43,11 @@
 .icon-position{
     padding-right: 5px;
     margin-bottom: -3px;
+}
+
+.logoBox{
+    margin-right: auto;
+    margin-left: 100px;
 }
 
 #nav{

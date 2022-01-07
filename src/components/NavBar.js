@@ -3,11 +3,15 @@ import "./NavBar.scss";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { Link } from "react-router-dom";
+import { ReactComponent as ReactLogo } from "../svg/logo.svg";
 
 function NavBar({ openNav }) {
   return (
     <div>
       <header className="Nav-header">
+        <div className="logoBox">
+          <ReactLogo />
+        </div>
         <nav id="nav">
           <div className="flex-box">
             <Link to="/app/about">
