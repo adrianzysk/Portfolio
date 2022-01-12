@@ -1,0 +1,143 @@
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root{
+    height: 100%;
+}
+
+.height{
+    height: 100%;
+}
+
+.bg-image {
+    background-image: url("../img/backGround.webp"), url("../img/backGround.PNG");
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    height: 100% ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+}
+
+.bg-border {
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    font-size: 4em;
+    letter-spacing: .15em;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.link{
+    svg{
+      color: #f1f1f1;
+      transform: rotate(180deg);
+      transition: 1s;
+    }
+    svg:hover{
+      color: lightblue;
+      transition: .5s;
+      transform: translateX(0px) rotate(0deg) translateY(5px);
+    }
+}
+
+.name{
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  z-index: 2;
+  color: white;
+  letter-spacing: .5em;
+  font-size: 2em;
+}
+
+.icons{
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  a{
+    padding-right: 30px;
+    svg{
+        font-size: 2em !important;
+        color: honeydew;
+    }
+    svg:hover{
+        color: rgb(58, 77, 58);
+        transition: 0.5s;
+        transform: rotate(360deg);
+    }
+  }
+}
+
+.iconsBottom{
+  display: none;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  a{
+    padding-right: 30px;
+    svg{
+        font-size: 3em !important;
+        color: honeydew;
+    }
+    svg:hover{
+        color: rgb(58, 77, 58);
+        transition: 0.5s;
+        transform: rotate(360deg);
+    }
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .icons{
+    display: none;
+  }
+  .bg-border{
+    font-size: 3em;
+    letter-spacing: normal;
+  }
+  .iconsBottom{
+    display: initial;
+  }
+}
+
+@media screen and (max-width:500px),
+       screen and (max-height:800px) {
+  .name{
+    letter-spacing: initial;
+    font-size: 1.8em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bg-border{
+    font-size: 1.5em;
+  }
+  .iconsBottom{
+    a{
+      padding-right: 10px;
+    }
+  }
+}

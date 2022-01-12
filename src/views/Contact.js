@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import "./Contact.scss";
 
 function Contact() {
   const form = useRef();
@@ -21,17 +22,26 @@ function Contact() {
           console.log(error.text);
         }
       );
+    document.getElementById("someForm").reset();
+    alert("You have sent email.");
   };
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="from_name" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
+    <div style={{ width: "70%" }} className="flexBox">
+      <p className="heading">Contact</p>
+      <form id="someForm" ref={form} onSubmit={sendEmail}>
+        <div className="flexBox">
+          <label>Your Name</label>
+          <input type="text" required name="user_name" />
+          <label>Your Email</label>
+          <input type="email" required name="from_name" />
+          <label>Subject</label>
+          <input type="text" required name="user_subject" />
+          <label>Your Message</label>
+          <textarea name="message" required rows={10} />
+          <input type="submit" value="Send" />
+        </div>
+      </form>
+    </div>
   );
 }
 
