@@ -30,8 +30,13 @@ footer{
     }
 }
 
+.rightPadding{
+    padding-right: 40px;
+}
+
 .footerBox{
-    padding-top: 9vh;
+    padding-top: 8vh;
+    bottom: -10px;
 }
 
 @media screen and (max-width:800px) {
@@ -40,7 +45,7 @@ footer{
         height: 12vh;
     }
     .footerBox{
-        padding-top: 13vh;
+        padding-top: 12vh;
     }
 }
 
@@ -50,6 +55,6 @@ footer{
         height: 15vh;
     }
     .footerBox{
-        padding-top: 16vh;
+        padding-top: 15vh;
     }
 }

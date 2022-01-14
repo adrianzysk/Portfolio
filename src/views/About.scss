@@ -1,0 +1,102 @@
+
+$boxColor1: #02343F;
+$boxColor2: #F0EDCC;
+
+.title{
+    font-size: 4em;
+    border-bottom: 1px solid gray;
+    margin: 20px 0;
+}
+
+.text{
+    font-size: 1.7em;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    font-size: 2em;
+}
+
+td{
+    padding: 10px;
+}
+
+.boxButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    border: 10px solid $boxColor1;
+    color: $boxColor1;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.boxButton:hover{
+    transition: .5s;
+    border-radius: 0;
+}
+
+.buttonOne{
+    border: 10px solid $boxColor1;
+    color: $boxColor1;
+}
+
+.buttonTwo{
+    border: 10px solid $boxColor2;
+    color: $boxColor2;
+}
+
+.halfBox1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    background-color: $boxColor2;
+}
+
+.halfBox2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    background-color: $boxColor1;
+}
+
+@media screen and (max-width: 800px) {
+    .text{
+        font-size: 1.2em;
+        letter-spacing: normal;
+    }
+    .td{
+        padding: 5px;
+    }
+    .flex{
+        flex-direction: column;
+        height: auto;
+    }
+    .halfBox1, .halfBox2{
+        width: 100%;
+    }
+    .boxButton{ 
+        margin: 50px auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .text{
+        font-size: 1em;
+    }
+    .title{
+        font-size: 3em;
+    }
+}

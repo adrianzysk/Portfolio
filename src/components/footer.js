@@ -11,6 +11,7 @@ function Footer() {
         <div>&copy; Adrian Zyśk</div>
         <div>
           <a
+            className="rightPadding"
             target="_blank"
             href="https://www.linkedin.com/in/adrian-zysk"
             rel="noreferrer"
