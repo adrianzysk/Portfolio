@@ -11,7 +11,6 @@ export const filmSlice = createSlice({
       const index = state.film.findIndex(
         (el) => el.imdbID === action.payload.imdbID
       );
-      console.log(index);
       if (index === -1) state.film.push(action.payload);
     },
     remove: (state, action) => {

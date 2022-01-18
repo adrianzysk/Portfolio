@@ -111,6 +111,21 @@ body, html {
   }
 }
 
+.landing-enter {
+  opacity: 0.2;
+}
+.landing-enter-active {
+  opacity: 1;
+  transition: opacity 800ms;
+}
+.landing-exit {
+  opacity: 1;
+}
+.landing-exit-active {
+  opacity: 0.2;
+  transition: opacity 800ms;
+}
+
 @media screen and (max-width:1000px) {
   .icons{
     display: none;
