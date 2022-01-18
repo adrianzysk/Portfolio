@@ -15,9 +15,9 @@ function MoviesList() {
   };
   useEffect(async () => {
     try {
-      await fetch(`http://www.omdbapi.com/?apikey=e9e297b&s=${search}`).then(
-        (response) => response.json().then((data) => setMovies(data))
-      );
+      await fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=d255b2b37994041b1875445e6a30994e&query=${search}`
+      ).then((response) => response.json().then((data) => console.log(data)));
     } catch (error) {
       console.log(error);
     }
