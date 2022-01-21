@@ -1,5 +1,4 @@
 .Nav-header {
-    width: 100%;
     background-color: #2a2d33;
     height: 15vh;
     display: flex;
@@ -8,11 +7,16 @@
     justify-content: flex-end;
     font-size: calc(10px + 1.5vmin);
     color: white;
-    position: fixed;
     border: none;
     border-radius: 0 0 10px 10px;
     z-index: 1;
   }
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
 
 .Nav-box{
     padding-bottom: 15vh;
@@ -21,6 +25,17 @@
 .flex-box {
     display: flex;
     flex-direction: row;
+}
+
+.flexDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: black;
+    opacity: .8;
+    color: whitesmoke;
+    height: 30vh;
+    transition: .5s;
 }
 
 .flex-box{
@@ -53,8 +68,56 @@
     margin-left: 100px;
 }
 
+.logo{
+    width: 60px;
+    height: 40px;   
+    margin: auto 10px;
+}
+
 #nav{
     transition: .5s;
+}
+
+.bar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2a2d33;
+    height: 8vh;
+    width: 100%;
+}
+
+.show{
+    display: none;
+}
+
+.logo{
+    width: 40px;
+    height: auto;
+}
+
+.button{
+    height: 40px;
+    width: 40px;
+    margin: auto 20px;
+    background-color: honeydew;
+    border: 1px solid black;
+    border-radius: 5px;   
+}
+
+.button:hover{
+    opacity: .8; 
+}
+
+.buttons{
+    background-color: transparent;
+    color: honeydew;
+    border: none;
+    font-size: 1em;
+}
+.buttons:hover{
+    color: rgb(146, 150, 146);
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 @media screen and (max-width:1120px) {
@@ -64,30 +127,35 @@
 }
 
 @media screen and (max-width:600px) {
-    .flex-box{
-        flex-direction: column;
-        a{
-            button{
-                padding: 8px;
-                margin: 0;
-            }
-        }
+    .hide{
+        display: none;
     }
-    .Nav-header{
-        align-items: center;
-        justify-content: center;
-        height: 22vh;
+    .show{
+        display: block;
+        transition: .5s;
     }
     .Nav-box{
-        padding-bottom: 23vh;
+        padding-bottom: 8vh;
     }
-    ul{
-        margin-top: 0;
-        button{
-            padding: 4px;
-        }
+}
+ 
+@keyframes inAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
     }
-    .logoBox{
-        display: none;
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+  
+@keyframes outAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
     }
 }

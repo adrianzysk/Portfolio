@@ -8,23 +8,64 @@ input{
   padding: 10px;
   font-size: 1.5rem;
   text-align: center;
-  background-color: #837e7e6e;
-  border: none;
+  background-color: transparent;
   transition: .5s;
 }
 
 input:focus{
   transition: .5s;
-  background-color: honeydew;
-  border: none;
+  background-color: white;
+}
+
+input:focus-visible{
+  outline: transparent;
 }
 
 input:focus::placeholder {
   color: transparent;
 }
 
-.SearchDescription{
-  font-size: 1.5rem;
+.search{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: gray;
+  font-size: 2em;
+  border-bottom: 1px solid gray;
   text-align: center;
-  letter-spacing: .2rem;
+  width: 40%;
+}
+
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: rgb(23, 23, 99); 
+  color: whitesmoke; 
+  cursor: pointer;  
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; 
+  font-size: 3em; 
+}
+
+#myBtn:hover {
+  transition: .5s;
+  opacity: .8;
+}
+
+@media screen and (max-width:1000px) {
+  .search{
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .search{
+    font-size: 1.3em;
+  }
 }

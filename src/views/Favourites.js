@@ -14,7 +14,7 @@ function Favourites() {
     <CSSTransition in={inProp} timeout={800} classNames="landing">
       <div>
         <div className="App">
-          <div className="SearchDescription">
+          <div className="search">
             <div>
               <p>
                 <b>FAVOURITES</b>
@@ -23,13 +23,15 @@ function Favourites() {
           </div>
           {!!films.film?.length &&
             films.film.map((movie) => (
-              <div key={movie.imdbID}>
+              <div key={movie.id}>
                 <FavouriteBox
                   title={movie.title}
                   poster={movie.poster}
-                  type={movie.type}
-                  year={movie.year}
-                  imdbID={movie.imdbID}
+                  desc={movie.desc}
+                  release={movie.release}
+                  id={movie.id}
+                  vote={movie.vote}
+                  count={movie.vote}
                 />
               </div>
             ))}

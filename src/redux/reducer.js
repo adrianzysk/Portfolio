@@ -8,13 +8,11 @@ export const filmSlice = createSlice({
   },
   reducers: {
     add: (state, action) => {
-      const index = state.film.findIndex(
-        (el) => el.imdbID === action.payload.imdbID
-      );
+      const index = state.film.findIndex((el) => el.id === action.payload.id);
       if (index === -1) state.film.push(action.payload);
     },
     remove: (state, action) => {
-      const index = state.film.findIndex((el) => el.imdbID === action.payload);
+      const index = state.film.findIndex((el) => el.id === action.payload);
       state.film.splice(index, 1);
     },
   },

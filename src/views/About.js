@@ -24,10 +24,10 @@ function About() {
           <p className="text">
             I am a novice web developer. Since 2015, programming is my passion.
             I finished studies in the field of computer science. Mainly I&apos;m
-            interested in web applications especially front-end. I would like
-            primarily at projects that every time they will teach me something
-            and will allow you to gain experience. In 2021 I opened my own
-            activity.
+            interested in web applications especially front-end. I would like to
+            participate in projects that will teach me something new. I&apos;m
+            open to new technologies and i wish to gain more experience. I
+            constantly develop my skills and learn quickly.
           </p>
           <p className="title">
             Skills
@@ -40,12 +40,13 @@ function About() {
             <tbody>
               <tr>
                 <td>Programming Languages:</td>
-                <td>C, C++, JavaScript, Java, Python,</td>
+                <td>C, C++, JavaScript, Java, Python</td>
               </tr>
               <tr>
                 <td>Web Technologies:</td>
                 <td>
-                  React.js, CSS3, HTML5, Express.js, jQuery, Node.js, Socket.io,
+                  HTML5, CSS3, React.js, jQuery, Node.js, Express.js, Socket.io,
+                  GraphQl
                 </td>
               </tr>
             </tbody>

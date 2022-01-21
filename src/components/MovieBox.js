@@ -1,27 +1,62 @@
 import React from "react";
+import { Rating } from "react-simple-star-rating";
 import { useDispatch } from "react-redux";
 import { add } from "../redux/reducer";
+import useDimension from "../hooks/useDimension";
 import "./MovieBox.scss";
 
-function MovieBox({ title, poster, type, year, imdbID }) {
+function MovieBox({ title, poster, desc, release, id, vote, count }) {
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(add({ title, poster, type, year, imdbID }));
+    dispatch(add({ title, poster, desc, release, id, vote, count }));
   };
+  const [width] = useDimension();
+  let size;
+  if (width > 2150) {
+    size = 60;
+  } else if (width > 1850) {
+    size = 40;
+  } else if (width > 1400) {
+    size = 38;
+  } else if (width > 900) {
+    size = 30;
+  } else if (width > 440) {
+    size = 20;
+  } else {
+    size = 10;
+  }
   return (
     <div className="box">
-      <h1>{title}</h1>
-      <img src={poster} alt="Movie or game" />
-      <h3>Type: {type}</h3>
-      <h3>Year: {year}</h3>
-      <button
-        type="button"
-        className="favouriteBox"
-        aria-label="Add to Favourites"
-        onClick={handleClick}
-      >
-        <h2>ADD TO FAVOURITES</h2>
-      </button>
+      <div className="flexRow">
+        <div className="flexColumn">
+          <img
+            src={`https://image.tmdb.org/t/p/original/${poster}`}
+            alt="Movie or game"
+          />
+        </div>
+        <div className="flexColumn marginAuto">
+          <p className="underline names">{title}</p>
+          <p className="underline small">{desc}</p>
+          <p className="underline small">Release: {release}</p>
+          <div className="underline small">
+            <Rating
+              readonly={1}
+              initialValue={vote}
+              iconsCount={10}
+              size={size}
+            />
+            <p>Vote count: {count}</p>
+          </div>
+          <button
+            type="button"
+            className="movieButton"
+            aria-label="Add to Favourites"
+            onClick={handleClick}
+          >
+            <p>ADD TO FAVOURITES</p>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
