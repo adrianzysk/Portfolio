@@ -2,6 +2,12 @@
 
 This project was created with create-react-app. It is build on React. Uses external rest api from tmdb to search for films. It uses Redux to store search results. Site is done mainly for learning purpouse.
 
+![LandingPage](https://user-images.githubusercontent.com/25934445/150808326-ad3d0372-047c-4db2-b1ce-77458fd40c78.PNG)
+
+### `npm install`
+
+Install all dependencies from package.json.
+
 ### `npm start`
 
 Runs the app in the development mode.\
