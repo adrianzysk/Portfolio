@@ -1,6 +1,6 @@
 # Portfolio
 
-This project was created with create-react-app.
+This project was created with create-react-app. It is build on React. Uses external rest api from tmdb to search for films. It uses Redux to store search results. Site is done mainly for learning purpouse.
 
 ### `npm start`
 
