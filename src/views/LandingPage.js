@@ -37,7 +37,7 @@ function LandingPage() {
           </Link>
         </div>
         <div className="bg-box">
-          <div className="bg-border">JUST AVERAGE BEGINNING WEB DEVELOPER</div>
+          <div className="bg-border">JUST AVERAGE JUNIOR WEB DEVELOPER</div>
           <Link className="link" to="/app/about">
             <ArrowCircleDownIcon sx={{ fontSize: 200 }} />
           </Link>

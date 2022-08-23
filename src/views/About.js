@@ -22,8 +22,8 @@ function About() {
             />
           </p>
           <p className="text">
-            I am a novice web developer. Since 2015, programming is my passion.
-            I finished studies in the field of computer science. Mainly I&apos;m
+            I am a junior web developer. Since 2015, programming is my hobby. I
+            finished studies in the field of computer science. Mainly I&apos;m
             interested in web applications especially front-end. I would like to
             participate in projects that will teach me something new. I&apos;m
             open to new technologies and i wish to gain more experience. I
@@ -39,14 +39,17 @@ function About() {
           <table className="text">
             <tbody>
               <tr>
-                <td>Programming Languages:</td>
-                <td>C, C++, JavaScript, Java, Python</td>
+                <td>Languages:</td>
+                <td>
+                  TypeScript, JavaScript, HTML5, CSS3, Python Python, C, C++
+                </td>
               </tr>
               <tr>
-                <td>Web Technologies:</td>
+                <td>Technologies:</td>
                 <td>
-                  HTML5, CSS3, React.js, jQuery, Node.js, Express.js, Socket.io,
-                  GraphQl
+                  Next.js React.js, Sass, Styled-Components, Node.js,
+                  Express.js, Socket.io, GraphQl, REST API, Sequelize,
+                  PostgreSQL
                 </td>
               </tr>
             </tbody>
@@ -56,7 +59,7 @@ function About() {
           <div className="halfBox1">
             <a
               className="boxButton buttonOne"
-              href="https://drive.google.com/file/d/1ycPl8O5wA3x7rylQESDTNK6z1qteLUsd/view?usp=sharingf"
+              href="https://drive.google.com/file/d/1IWjjQKK6dTama46RqTJ52gGW_H0ivE3F/view?usp=sharing"
               target="blank"
             >
               <p>RESUME</p>
